@@ -8,7 +8,7 @@ fu! quickui#extras#menus#view#init()
     MenuAdd {'id': 'menu_view', 'text': '&View', 'order': 400}
 
     " items
-    if has(':NERDTreeToggle')
-        MenuItemAdd {'id': 'item_view_explorer', 'menu_id': 'menu_view', 'text': '&Explorer', 'command': 'NERDTreeToggle', 'tips': 'Open explorer using NERDTreeToggle', 'order': 100}
+    if exists('g:explorer_command')
+        MenuItemAdd {'id': 'item_view_explorer', 'menu_id': 'menu_view', 'text': '&Explorer', 'command': g:explorer_command, 'tips': 'Open explorer', 'order': 100}
     endif
 endfu
